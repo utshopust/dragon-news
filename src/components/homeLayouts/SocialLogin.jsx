@@ -28,13 +28,13 @@ const SocialLogin = () => {
       <div className="flex flex-col gap-3">
 
         {/* Google */}
-        <button className="flex items-center justify-center gap-3 w-full border border-gray-300 rounded-lg py-2 hover:bg-gray-100 transition">
+        <button className="flex items-center justify-center gap-3 w-full border border-gray-300 rounded-lg py-2 hover:bg-gray-100 transition cursor-pointer btn">
           <FcGoogle size={22} />
           <span className="font-medium">Continue with Google</span>
         </button>
 
         {/* GitHub */}
-        <button className="flex items-center justify-center gap-3 w-full bg-gray-900 text-white rounded-lg py-2 hover:bg-gray-800 transition">
+        <button className="flex items-center justify-center gap-3 w-full bg-gray-900 text-white rounded-lg py-2 hover:bg-gray-800 transition cursor-pointer btn">
           <FaGithub size={22} />
           <span className="font-medium">Continue with GitHub</span>
         </button>
