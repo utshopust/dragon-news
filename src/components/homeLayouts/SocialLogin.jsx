@@ -9,7 +9,7 @@ const SocialLogin = () => {
   const provider = new GoogleAuthProvider();
 
   const handleGoogleSignIn = () => {
-    console.log("google clicked");
+    // console.log("google clicked");
     signInWithPopup(auth, provider)
     .then(result =>{
       console.log(result);

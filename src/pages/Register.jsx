@@ -19,11 +19,11 @@ const Register = () => {
     const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log({ name, email, password, photo });
+    // console.log({ name, email, password, photo });
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
         updateUser({ displayName: name, photoURL: photo })
           .then(() => {
             setUser({...user,displayName: name, photoURL: photo});
