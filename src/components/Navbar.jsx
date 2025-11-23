@@ -60,7 +60,7 @@ const Navbar = () => {
 
         {/* Desktop Login / Logout */}
         <div className="hidden md:flex items-center gap-3">
-          <img src={userIcon} alt="" className="w-8 h-8" />
+          <img src={`${user? user.photoURL: userIcon}`} alt="" className="w-8 h-8 rounded-full" />
           {user ? (
             <button onClick={handleLogOut} className="btn btn-primary px-10">
               Logout

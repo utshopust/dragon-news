@@ -1,10 +1,11 @@
 import React, { use, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const { createUser, setUser, updateUser } = use(AuthContext);
   const [nameError, setNameError] = useState("");
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -23,7 +24,16 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        setUser(user);
+        updateUser({ displayName: name, photoURL: photo })
+          .then(() => {
+            setUser({...user,displayName: name, photoURL: photo});
+          })
+          .catch((error) => {
+           console.log(error);
+           setUser(user);
+          });
+
+        navigate("/auth/login");
       })
       .catch((error) => {
         // const errorCode = error.code;
@@ -50,9 +60,7 @@ const Register = () => {
                 placeholder="Enter Your Name"
                 required
               />
-              {
-                nameError && <p className="text-red-500 text-xs">{nameError}</p>
-              }
+              {nameError && <p className="text-red-500 text-xs">{nameError}</p>}
               {/* Photo URL */}
               <label className="label">Photo URL</label>
               <input
