@@ -1,16 +1,57 @@
-# React + Vite
+🐉 Dragon News
+A modern news portal built with React, Firebase, and Tailwind CSS.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Website
+👉 https://dragon-news-b33e3.web.app
 
-Currently, two official plugins are available:
+📌 Overview
+Dragon News is a fully responsive, feature-rich news application.
+It offers clean UI, category-based browsing, dynamic news pages, Firebase authentication, and a smooth user experience across all devices.
+This project follows industry-standard coding patterns and a scalable folder structure.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Key Features
+Frontend
+1. Responsive modern UI with Tailwind + DaisyUI
+2. Multi-layout structure (Home / Login / Register / News Details)
+3. Sticky navigation, sidebars, and smooth routing
+4. Light, clean typography and professional feel
+5. Scroll-to-top button
+6. Fully mobile-friendly
 
-## React Compiler
+Authentication
+1. Google login
+2. Email/password login
+3. Protect routes
+4. Display user photo & name
+5. Logout functionality
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+News System
+1. Dynamic news loading
+2. Category-based filtering
+3. Full article pages with clean design
+4. Trending & Latest news sections
+5. Social media sidebar (Facebook, Instagram, LinkedIn)
 
-## Expanding the ESLint configuration
+🧰 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Category       | Tools                              |
+| -------------- | ---------------------------------- |
+| Framework      | React + Vite                       |
+| Styling        | Tailwind CSS, DaisyUI, React Icons |
+| Routing        | React Router                       |
+| Authentication | Firebase                           |
+| Deployment     | Firebase Hosting                   |
+
+
+📦 Firebase Deployment
+Build the project:
+npm run build
+
+Deploy:
+firebase deploy
+
+👨‍💻 Developer
+Hasan Ul Kabir Utsho
+Frontend Developer | React | Firebase | Tailwind
+
+<img width="1870" height="950" alt="Screenshot 2025-11-23 182903" src="https://github.com/user-attachments/assets/7858ccce-cf41-4177-8c7b-1b947f8c733c" />
