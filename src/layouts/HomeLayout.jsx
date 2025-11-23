@@ -5,6 +5,7 @@ import LatestNews from "../components/LatestNews";
 import Navbar from "../components/Navbar";
 import LeftAside from "../components/homeLayouts/LeftAside";
 import RightAside from "../components/homeLayouts/RightAside";
+import ScrollToTop from "../components/ScrollToTop";
 
 const HomeLayout = () => {
   return (
@@ -43,6 +44,11 @@ const HomeLayout = () => {
           </div>
         </aside>
       </main>
+      <div className="min-h-screen bg-gray-50">
+  {/* all your layout content */}
+  <ScrollToTop />
+</div>
+
     </div>
   );
 };

@@ -95,7 +95,7 @@ const NewsDetailsCard = ({ news }) => {
              hover:bg-blue-700 active:scale-95 transition-all duration-200 shadow-sm"
         >
           <span className="text-lg">←</span>
-          Back 
+          Home 
         </Link>
       </div>
     </div>
