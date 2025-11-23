@@ -1,13 +1,15 @@
 import React from "react";
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 import Header from "../components/Header";
 import LatestNews from "../components/LatestNews";
 import Navbar from "../components/Navbar";
 import LeftAside from "../components/homeLayouts/LeftAside";
 import RightAside from "../components/homeLayouts/RightAside";
 import ScrollToTop from "../components/ScrollToTop";
+import Loading from "../pages/Loading";
 
 const HomeLayout = () => {
+  const {state} = useNavigation();
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
@@ -34,7 +36,7 @@ const HomeLayout = () => {
 
         {/* Main Content */}
         <section className="col-span-12 md:col-span-8 lg:col-span-6 flex flex-col gap-6">
-          <Outlet />
+          {state =="loading"? <Loading></Loading> : <Outlet />}
         </section>
 
         {/* Right Sidebar */}
