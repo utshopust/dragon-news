@@ -2,6 +2,8 @@ import React, { use, useState } from "react";
 import { Link, NavLink } from "react-router";
 import userIcon from "../assets/user.png";
 import { AuthContext } from "../provider/AuthProvider";
+import { UserIcon } from "lucide-react";
+import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
@@ -19,7 +21,7 @@ const Navbar = () => {
       <div className="px-4 py-3 flex justify-between items-center">
         {/* User Email */}
         <div className="text-sm px-3 py-1 bg-gray-100 border border-gray-200 rounded-lg text-gray-700">
-          {user && user.email}
+          {user && user.displayName}
         </div>
 
         {/* Desktop Nav */}
@@ -60,7 +62,7 @@ const Navbar = () => {
 
         {/* Desktop Login / Logout */}
         <div className="hidden md:flex items-center gap-3">
-          <img src={`${user? user.photoURL: userIcon}`} alt="" className="w-8 h-8 rounded-full" />
+          <img src={`${user? user.photoURL: UserIcon}`} alt="" className="w-8 h-8 rounded-full" />
           {user ? (
             <button onClick={handleLogOut} className="btn btn-primary px-10">
               Logout
@@ -70,7 +72,9 @@ const Navbar = () => {
               Login
             </Link>
           )}
+          
         </div>
+        
 
         {/* Mobile Menu Button */}
         <button className="md:hidden" onClick={() => setOpen(!open)}>

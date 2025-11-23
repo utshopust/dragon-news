@@ -9,7 +9,7 @@ import ScrollToTop from "../components/ScrollToTop";
 
 const HomeLayout = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
       <header>
         <Header />
@@ -24,7 +24,7 @@ const HomeLayout = () => {
       </header>
 
       {/* Main Content */}
-      <main className="w-11/12 mx-auto my-5 grid grid-cols-12 gap-6">
+      <main className="w-11/12 mx-auto my-5 grid grid-cols-12 gap-6 flex-1">
         {/* Left Sidebar */}
         <aside className="col-span-12 md:col-span-4 lg:col-span-3 mb-6 md:mb-0">
           <div className="sticky top-4 md:top-0">
@@ -44,11 +44,9 @@ const HomeLayout = () => {
           </div>
         </aside>
       </main>
-      <div className="min-h-screen bg-gray-50">
-  {/* all your layout content */}
-  <ScrollToTop />
-</div>
 
+      {/* Scroll to top button */}
+      <ScrollToTop />
     </div>
   );
 };

@@ -8,6 +8,8 @@ import Register from "../pages/Register";
 import AuthLayout from "../layouts/AuthLayout";
 import NewsDetails from "../pages/NewsDetails";
 import PrivateRoute from "../provider/PrivateRoute";
+import About from "../components/About";
+import Career from "../components/Career";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +54,14 @@ const router = createBrowserRouter([
     path: "/*",
     Component: Error,
   },
+  {
+    path: "/about",
+    Component: About,
+  },
+  {
+    path: "/career",
+    Component: Career,
+  }
 ]);
 
 export default router;

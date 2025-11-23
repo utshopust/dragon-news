@@ -33,7 +33,7 @@ const Register = () => {
            setUser(user);
           });
 
-        navigate("/auth/login");
+        navigate("/");
       })
       .catch((error) => {
         // const errorCode = error.code;
